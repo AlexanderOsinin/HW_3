@@ -17,8 +17,6 @@ public class SuccessfulFormTest {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.timeout = 5000;
-
     }
 
     @Test
@@ -39,7 +37,7 @@ public class SuccessfulFormTest {
 
 
         $("#subjectsInput").setValue("Arts").pressEnter();
-        $("[for=hobbies-checkbox-1]").click();
+        $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#uploadPicture").uploadFromClasspath("test.jpg");
         $("#currentAddress").setValue("Some street 1");
 
